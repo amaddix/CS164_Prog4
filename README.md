@@ -1,4 +1,41 @@
 # CS164_Prog4
+
+Programming Assignment #4 
+CS 163 Data Structures 
+Submit your assignment to the D2L Dropbox (sign on via d2l.pdx.edu)
+
+
+
+Programming – Goal: The goal of this program is to create a binary search tree (BST) and to implement the BST algorithms recursively. 
+Background: The advantage of a binary search tree is the ability to retrieve our  data using a logarithmic performance assuming that the tree is relatively balanced  and be able to search for a range of information and obtain our data in sorted  order. In program #4 we will experience all of these characteristics. We will use  the same data as program #3 except that instead of using a hash table, we will  implement a binary search tree. PLEASE NOTE – we are REPLACING the  concept of a hash table with a binary search tree when moving from program  #3 to program #4. 
+Specifics: In Program #4 we will use a BST to search for a CS term. We will also  now be able to display all of the terms in sorted order!. You will be basing this  program off of the same data as in program #3 but now using a DIFFERENT  data structure! We are moving away from hash tables and learning about BSTs. 
+The use of external data files is now optional, but recommended. 
+The information that we want to keep track of includes: 
+1. Term (e.g., Hash Function) 
+2. Definition (e.g., “A hash function is any function that can be used to map data of  arbitrary size to data of fixed size.” 
+3. Reference information - where you found this information (e.g.,Wikipedia) 4. Citation - a citation could be a textbook or a website (e.g.,  https://en.wikipedia.org/wiki/Hash_function) 
+The ADT operations that must be performed on this data are: 1) Constructor – initialize all data members 
+2) Destructor – deallocate (release) all dynamic memory and reset the data  members to their zero equivalent value; this should call a recursive function  that performs postorder traversal (recursively) to deallocate all data and nodes. 
+3) Insert a new location, using the CS term for the BST algorithm.  4) Remove all information about a CS term 
+5) Remove all CS terms that were found from a particular source (e.g.,Wikipedia) 6) Retrieve the information about a particular CS term 
+a. Remember, retrieve is NOT a display function and should supply  the matching information back to the calling routine through the 
+CS163 Spring 2018 Assignment #4 
+argument list. 
+7) Display all CS terms (displayed alphabetically!). 
+8) Height – supply the height back to the calling routine. 
+Data Structures: Write a C++ program that implements a binary search tree. The  binary search tree should be a non-linear implementation (using left and right  pointers). The underlying data may be stored as a struct or class. 
+Evaluate the performance of storing and retrieving items from this tree. Monitor  the height of the tree and determine how that relates to the number of items. If the  number of items is 100 and the height is 90, we know that we do not have a  relatively balanced tree!! Use the information from the Carrano reading to assist  in determine if we have a reasonable tree, or not. Your efficiency write up must  discuss what you have discovered.  
+Things you should know...as part of your program: 
+1) Do not use statically allocated arrays in your classes or structures. All  memory must be dynamically allocated and kept to a minimum!  2) All data members in a class must be private 
+3) Never perform input operations from your class in CS163 
+4) Global variables are not allowed in CS163 
+5) Do not use the String class! (use arrays of characters instead and the cstring  library!) 
+6) Use modular design, separating the .h files from the .cpp files. Remember, .h  files should contain the class header and any necessary prototypes. The .cpp  files should contain function definitions. You must have at least 1 .h file and  2 .cpp files. Never "#include" .cpp files! 
+7) Use the iostream library for all I/O; do not use stdio.h. 
+8) Make sure to define a constructor and destructor for your class. Your  destructor must deallocate all dynamically allocated memory.
+-------------------------------------------------------------------------
+
+
 What functions your ADT will need to have
 The abstract data type of this function will be a binary search tree. For this abstract data type, it will need 6 functions (not including the constructor and destructor) to complete the tasks required of this program.
 It will need an insert function to add a new term onto the list of terms. To do this, it will need to recursively go through each node of the trees until it has found its proper placement. First checking if the root’s not is smaller or larger than the data being added ( going left if it is larger, and right if the root is smaller). 
